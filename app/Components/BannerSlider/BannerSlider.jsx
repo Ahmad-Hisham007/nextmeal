@@ -21,7 +21,7 @@ const slides = [
 const BannerSlider = () => {
 
     return (
-        <div className="relative h-[600px] w-full overflow-hidden bg-black">
+    <div className="relative h-screen w-full overflow-hidden bg-black">
             <Swiper
                 modules={[Navigation, Autoplay, EffectFade]}
                 effect="fade"
