@@ -7,12 +7,14 @@ import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import { GoArrowLeft, GoArrowRight } from 'react-icons/go';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const slides = [
     {
         id: 1,
         title: "Explore The Lobsters",
-        subtitle: "WELCOME TO THE KAFFEN",
+        subtitle: "WELCOME TO THE NEXTMEAL",
         image: "/slider_img_1.jpg", // Replace with your asset
     },
     // Add more slides here...
@@ -21,7 +23,7 @@ const slides = [
 const BannerSlider = () => {
 
     return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+        <div className="relative h-screen w-full overflow-hidden bg-black">
             <Swiper
                 modules={[Navigation, Autoplay, EffectFade]}
                 effect="fade"
@@ -43,7 +45,7 @@ const BannerSlider = () => {
                                 backgroundPosition: "center",
                             }}
                         >
-                            <div className="max-w-2xl space-y-6">
+                            <div className="max-w-6xl w-full mx-auto space-y-6">
                                 <div className="flex items-center gap-3">
                                     <span className="h-[2px] w-8 bg-primary"></span>
                                     <p className="text-sm font-bold tracking-widest text-white uppercase">
@@ -51,22 +53,18 @@ const BannerSlider = () => {
                                     </p>
                                 </div>
 
-                                <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight">
-                                    {slide.title.split(" ").map((word, i) => (
-                                        <span key={i} className="block">
-                                            {word}
-                                        </span>
-                                    ))}
+                                <h1 className="text-6xl md:text-8xl font-bold text-white leading-tight max-w-2xl">
+                                    {slide.title}
                                 </h1>
 
                                 <div className="flex flex-wrap gap-4 pt-4">
                                     <button className="btn btn-primary rounded-none px-8 text-white border-none hover:opacity-90">
                                         EXPLORE MORE
-                                        <span className="ml-2">›</span>
+                                        <span className="ml-2"><MdKeyboardArrowRight /></span>
                                     </button>
                                     <button className="btn btn-ghost rounded-none border border-white/20 px-8 text-white hover:bg-white hover:text-black">
                                         GET DELIVERY
-                                        <span className="ml-2">›</span>
+                                        <span className="ml-2"><MdKeyboardArrowRight /></span>
                                     </button>
                                 </div>
                             </div>
@@ -76,10 +74,10 @@ const BannerSlider = () => {
 
                 {/* Custom Navigation Arrows */}
                 <button className="custom-prev absolute left-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black transition hover:bg-primary hover:text-white">
-                    ‹
+                    <GoArrowLeft />
                 </button>
                 <button className="custom-next absolute right-4 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black transition hover:bg-primary hover:text-white">
-                    ›
+                    <GoArrowRight />
                 </button>
             </Swiper>
         </div>
