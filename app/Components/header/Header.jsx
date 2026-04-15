@@ -5,6 +5,7 @@ import React from 'react';
 import { IoChevronDownOutline } from "react-icons/io5";
 import { LuMoveRight } from 'react-icons/lu';
 import { MdOutlineMenu } from 'react-icons/md';
+import NavLink from '../NavLink/NavLink';
 
 
 const Header = () => {
@@ -20,18 +21,18 @@ const Header = () => {
                         </div>
                         <ul
                             tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><a>Home</a></li>
-                            <li><a>About</a></li>
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow [&_a.active]:text-primary [&_a]:hover:text-primary">
+                            <li><NavLink href="/">Home</NavLink></li>
+                            <li><NavLink href="/about">About</NavLink></li>
                             <li className="dropdown">
                                 <label tabIndex={0} className="cursor-pointer">
                                     Menu
                                     <IoChevronDownOutline />
                                 </label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 leading-relaxed shadow rounded-box w-52 gap-0 bg-secondary [&_li]:p-0 ![&_a]:py-1 [&_li:hover_span]:opacity-0 [&_li:hover_span]:translate-x-8 [&_li]:flex [&_li]:flex-nowrap [&_li]:flex-row [&_li]:justify-between [&_a]:text-white">
-                                    <li><a>Dine in Menu</a> <span className='opacity-100 translate-x-0 transition-all duration-300 text-primary'><LuMoveRight className='text-primary' /></span> </li>
-                                    <li><a>Breakfast Menu</a> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /></span> </li>
-                                    <li><a>Event Menu</a> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /> </span> </li>
+                                    <li><NavLink href="/menu">Dine in Menu</NavLink> <span className='opacity-100 translate-x-0 transition-all duration-300 text-primary'><LuMoveRight className='text-primary' /></span> </li>
+                                    <li><NavLink href="/menu">Breakfast Menu</NavLink> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /></span> </li>
+                                    <li><NavLink href="/menu">Event Menu</NavLink> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /> </span> </li>
                                 </ul>
                             </li>
                         </ul>
@@ -41,18 +42,18 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-white uppercase leading-[3.57em] font-semibold [&_a]:hover:text-primary [&_label]:hover:text-primary gap-6">
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
+                    <ul className="menu menu-horizontal px-1 text-white uppercase leading-[3.57em] font-semibold [&_label]:hover:text-primary gap-6 [&_a.active]:text-primary [&_a]:hover:text-primary">
+                        <li><NavLink href="/">Home</NavLink></li>
+                        <li><NavLink href="/about">About</NavLink></li>
                         <li className="dropdown">
                             <label tabIndex={0} className="cursor-pointer">
                                 Menu
                                 <IoChevronDownOutline />
                             </label>
                             <ul tabIndex={0} className="dropdown-content menu p-2 leading-relaxed shadow rounded-box w-52 gap-0 bg-secondary [&_li]:p-0 ![&_a]:py-1 [&_li:hover_span]:opacity-0 [&_li:hover_span]:translate-x-8 [&_li]:flex [&_li]:flex-nowrap [&_li]:flex-row [&_li]:justify-between">
-                                <li><a>Dine in Menu</a> <span className='opacity-100 translate-x-0 transition-all duration-300 text-primary'><LuMoveRight className='text-primary' /></span> </li>
-                                <li><a>Breakfast Menu</a> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /></span> </li>
-                                <li><a>Event Menu</a> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /> </span> </li>
+                                <li><NavLink href="/menu">Dine in Menu</NavLink> <span className='opacity-100 translate-x-0 transition-all duration-300 text-primary'><LuMoveRight className='text-primary' /></span> </li>
+                                <li><NavLink href="/menu">Breakfast Menu</NavLink> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /></span> </li>
+                                <li><NavLink href="/menu">Event Menu</NavLink> <span className='opacity-100 translate-x-0 transition-all duration-300'><LuMoveRight className='text-primary' /> </span> </li>
                             </ul>
                         </li>
                     </ul>
