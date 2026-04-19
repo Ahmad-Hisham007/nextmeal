@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["home", "root layout", "menu", "pages"]
+  "conventionalCommits.scopes": [
+    "home",
+    "root layout",
+    "menu",
+    "pages",
+    "(menu page)"
+  ]
 }

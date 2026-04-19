@@ -1,10 +1,11 @@
 import React from 'react';
+import SpecialMenu from './_components/MenuData';
 
-const MenuPage = () => {
+const MenuPage = ({ searchParams }) => {
     return (
-        <div>
-
-        </div>
+        <>
+            <SpecialMenu searchParams={searchParams}></SpecialMenu>
+        </>
     );
 };
 
